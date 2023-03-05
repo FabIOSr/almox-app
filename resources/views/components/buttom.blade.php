@@ -1,0 +1,1 @@
+<button type="button" class="btn btn-sm btn-{{ $color?? '' }}"><i class="bi bi-check"></i> {{ $text }}</button>

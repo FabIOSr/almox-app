@@ -1,0 +1,1 @@
+<span data-feather="{{ $icon?? '' }}" class="align-text-bottom text-{{ $color?? ''}}"></span>
