@@ -1,9 +1,15 @@
 import 'bootstrap';
+
+
+
 import feather from 'feather-icons';
 window.feather = feather;
 feather.replace({ 'aria-hidden': 'true' })
 
 import 'bootstrap-icons/font/bootstrap-icons.css';
+
+import jQuery from 'jquery';
+window.$ = jQuery;
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests

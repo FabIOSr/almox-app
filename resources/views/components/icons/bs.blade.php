@@ -1,0 +1,1 @@
+<i class="bi bi-{{ $icon?? '' }} mb-2"></i>

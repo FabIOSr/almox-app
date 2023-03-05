@@ -286,13 +286,13 @@
             </div>
         </div>
     </div>
-    @stack('modals')
     <x-modals.alert-delete title="One title"></x-modals.alert-delete>
-    <x-modals.modal></x-modals.modal>
     <x-modals.offcanvas></x-modals.offcanvas>
     <script src="{{ asset('almox/js/bootstrap.bundle.min.js') }}"></script>
     @livewireScripts()
     @stack('js')
+    @stack('modals')
+    <x-modals.modal></x-modals.modal>
 </body>
 
 </html>

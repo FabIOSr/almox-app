@@ -10,7 +10,8 @@
               ...
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal"><i class="bi bi-zoom-out"></i> Close</button>
+              <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">
+                <x-icons.bs icon="x"></x-icons.bs> Close</button>
               <x-buttom color="primary" text='Confirmar'></x-buttom>
             </div>
           </div>
