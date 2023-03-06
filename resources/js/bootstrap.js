@@ -8,8 +8,9 @@ feather.replace({ 'aria-hidden': 'true' })
 
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-import jQuery from 'jquery';
-window.$ = jQuery;
+// import jQuery from 'jquery';
+// window.$ = jQuery;
+import $ from 'jquery';
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests

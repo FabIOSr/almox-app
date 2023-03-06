@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Admin\User\Index;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/admin/users', Index::class)->name('admin.users');

@@ -65,7 +65,7 @@
 
     <!-- Custom styles for this template -->
     <link href="{{ asset('almox/css/dashboard.css') }}" rel="stylesheet">
-    @vite(['resources/sass/app.scss','resources/js/app.js'])
+    @vite(['resources/sass/app.scss'])
     @livewireStyles()
     @stack('css')
 </head>
@@ -111,7 +111,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link {{ request()->routeIs('admin.users') ? 'active':''}}" href="{{ route('admin.users') }}">
                                     <span data-feather="users" class="align-text-bottom"></span>
                                     Customers
                                 </a>
@@ -182,117 +182,15 @@
                         </div>
                     </div>
     
-                    <h2>Section title</h2>
-                    <div class="table-responsive">
-                        <table class="table table-striped table-sm">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Header</th>
-                                    <th scope="col">Header</th>
-                                    <th scope="col">Header</th>
-                                    <th scope="col">Header</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1,001</td>
-                                    <td>random</td>
-                                    <td>data</td>
-                                    <td>placeholder</td>
-                                    <td class="justify-content-between">
-                                        <a href="#" class="mx-1 text-decoration-none">
-                                            <span data-feather="edit-2" class="align-text-bottom"></span>
-                                        </a>
-                                        <a href="#" class="mx-1 text-decoration-none">
-                                            <span data-feather="info" class="align-text-bottom"></span>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>1,002</td>
-                                    <td>placeholder</td>
-                                    <td>irrelevant</td>
-                                    <td>visual</td>
-                                    <td class="justify-content-between">
-                                        <a href="#" class="mx-1 text-decoration-none">
-                                            <span data-feather="edit-2" class="align-text-bottom"></span>
-                                        </a>
-                                        <a href="#" class="mx-1 text-decoration-none">
-                                            <span data-feather="info" class="align-text-bottom"></span>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>1,003</td>
-                                    <td>data</td>
-                                    <td>rich</td>
-                                    <td>dashboard</td>
-                                    <td class="justify-content-between">
-                                        <a href="#" class="mx-1 text-decoration-none">
-                                            <span data-feather="edit-2" class="align-text-bottom"></span>
-                                        </a>
-                                        <a href="#" class="mx-1 text-decoration-none">
-                                            <span data-feather="info" class="align-text-bottom"></span>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>1,003</td>
-                                    <td>information</td>
-                                    <td>placeholder</td>
-                                    <td>illustrative</td>
-                                    <td class="justify-content-between">
-                                        <a href="#" class="mx-1 text-decoration-none">
-                                            <span data-feather="edit-2" class="align-text-bottom"></span>
-                                        </a>
-                                        <a href="#" class="mx-1 text-decoration-none">
-                                            <span data-feather="info" class="align-text-bottom"></span>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>1,006</td>
-                                    <td>dashboard</td>
-                                    <td>illustrative</td>
-                                    <td>rich</td>
-                                    <td class="justify-content-between">
-                                        <a href="#" class="mx-1 text-decoration-none">
-                                            <span data-feather="edit-2" class="align-text-bottom"></span>
-                                        </a>
-                                        <a href="#" class="mx-1 text-decoration-none">
-                                            <span data-feather="info" class="align-text-bottom"></span>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>1,012</td>
-                                    <td>text</td>
-                                    <td>placeholder</td>
-                                    <td>layout</td>
-                                    <td class="justify-content-between">
-                                        <a href="#" class="mx-1 text-decoration-none">
-                                            <span data-feather="edit-2" class="align-text-bottom"></span>
-                                        </a>
-                                        <a href="#" class="mx-1 text-decoration-none">
-                                            <x-icons.feather icon="trash-2" color="danger"></x-icons.feather>
-                                        </a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    @yield('content')
                 </main>
             </div>
         </div>
     </div>
-    <x-modals.alert-delete title="One title"></x-modals.alert-delete>
-    <x-modals.offcanvas></x-modals.offcanvas>
+    @vite('resources/js/app.js')
     <script src="{{ asset('almox/js/bootstrap.bundle.min.js') }}"></script>
     @livewireScripts()
     @stack('js')
-    @stack('modals')
-    <x-modals.modal></x-modals.modal>
 </body>
 
 </html>
