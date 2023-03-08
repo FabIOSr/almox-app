@@ -62,10 +62,8 @@
         }
     </style>
 
-
-    <!-- Custom styles for this template -->
     <link href="{{ asset('almox/css/dashboard.css') }}" rel="stylesheet">
-    @vite(['resources/sass/app.scss'])
+    @vite(['resources/sass/app.scss','resources/js/app.js'])
     @livewireStyles()
     @stack('css')
 </head>
@@ -186,8 +184,8 @@
                 </main>
             </div>
         </div>
-    </div>
-    @vite('resources/js/app.js')
+    </div>    
+    <script type="module" src="{{ asset('almox/js/jquery.min.js') }}"></script>
     <script src="{{ asset('almox/js/bootstrap.bundle.min.js') }}"></script>
     @livewireScripts()
     @stack('js')

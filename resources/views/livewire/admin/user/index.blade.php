@@ -33,13 +33,5 @@
             </tbody>
         </table>
     </div>
-
     @include('livewire.admin.user.modals')
-    @push('js')
-    <script type="module">
-        window.addEventListener('close-modal', event => {    
-            $('#updateUser').modal('hide');
-        })
-    </script>
-    @endpush
 </div>

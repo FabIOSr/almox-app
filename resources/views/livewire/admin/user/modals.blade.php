@@ -49,9 +49,7 @@
 </div>
 
 
-
-<div wire:ignore.self class="modal fade bg-secondary" id="updateUser" data-bs-backdrop="static" data-bs-keyboard="false"
-    tabindex="-1" aria-labelledby="updateUserLabel" aria-hidden="true">
+<div wire:ignore.self class="modal fade" id="updateUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -78,11 +76,14 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" id="close" class="btn btn-sm btn-secondary" data-bs-dismiss="modal"
-                        wire:click="closeModal">
-                        <x-icons.bs icon="x"></x-icons.bs> Close
+                    <button type="button" class="btn btn-sm btn-secondary close" data-bs-dismiss="modal" wire:click="closeModal">
+                        <x-icons.bs icon="x"></x-icons.bs> 
+                        Close
                     </button>
-                    <button type="submit" class="btn btn-sm btn-primary">Fechar e atualizar</button>
+                    <button type="submit" class="btn btn-sm btn-primary">
+                        <x-icons.bs icon="check"></x-icons.bs>
+                        Fechar e Atualizar
+                    </button>
                 </div>
             </form>
         </div>

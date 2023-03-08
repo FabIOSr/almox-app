@@ -19,20 +19,24 @@ class Index extends Component
 
     public function updateUser()
     {
-        $validatedData = $this->validate([
+        $validateData = $this->validate([
             'name' => 'required|min:6',
             'email' => 'required|email',
         ]);
 
-        User::findOrFail($this->userId)->update($validatedData);
+        User::findOrFail($this->userId)->update([
+            'name' => $this->name,
+            'email' => $this->email
+        ]);
+
         $this->closeModal();
+        $this->dispatchBrowserEvent('close-modal');
 
     }
 
     public function closeModal()
     {
-        $this->resetErrorBag();
-        $this->dispatchBrowserEvent('close-modal');
+        $this->resetErrorBag();        
         $this->reset();
     }
 
